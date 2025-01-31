@@ -1,0 +1,102 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro de Horas Trabajadas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Registro de Horas Trabajadas</h1>
+        <form id="hoursForm">
+            <div class="input-group">
+                <label>Nombre:</label>
+                <input type="text" id="nombre" required>
+            </div>
+            <div class="input-group">
+                <label>Rango:</label>
+                <input type="text" id="rango" required>
+            </div>
+            <div class="input-group">
+                <label>Fecha:</label>
+                <input type="date" id="fecha" required>
+            </div>
+            <div class="input-group">
+                <label>Hora de Entrada:</label>
+                <input type="time" id="horaEntrada" required>
+            </div>
+            <div class="input-group">
+                <label>Hora de Salida:</label>
+                <input type="time" id="horaSalida" required>
+            </div>
+            <button type="submit">Registrar</button>
+        </form>
+
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Buscar por nombre">
+            <button id="searchButton">Buscar</button>
+        </div>
+
+        <div class="tables-container">
+            <div class="table-section">
+                <h2>Registro Diario</h2>
+                <table id="horasTable">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Rango</th>
+                            <th>Fecha</th>
+                            <th>Entrada</th>
+                            <th>Salida</th>
+                            <th>Horas</th>
+                            <th>Estado</th>
+                        </tr>
+                    </thead>
+                    <tbody id="horasTableBody"></tbody>
+                </table>
+                <button id="clearTable">Limpiar Tabla</button>
+            </div>
+
+            <div class="table-section">
+                <h2>Resumen Semanal</h2>
+                <table id="semanalTable">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Horas Totales</th>
+                            <th>Estado</th>
+                        </tr>
+                    </thead>
+                    <tbody id="semanalTableBody"></tbody>
+                </table>
+            </div>
+
+            <div class="table-section">
+                <h2>No Cumplieron 28 Horas</h2>
+                <table id="incumplimientoTable">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Horas Totales</th>
+                        </tr>
+                    </thead>
+                    <tbody id="incumplimientoTableBody"></tbody>
+                </table>
+            </div>
+
+            <div class="table-section">
+                <h2>Cumplieron 28 Horas</h2>
+                <table id="cumplimientoTable">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Horas Totales</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cumplimientoTableBody"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
